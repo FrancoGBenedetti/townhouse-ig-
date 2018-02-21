@@ -1,0 +1,105 @@
+*{
+  box-sizing: border-box;
+
+}
+
+.gap{
+  padding: 20px !important;
+ 
+}
+
+.content{
+  font-family: 'PT Serif', serif;
+}
+.title{
+  font-family: 'Anton', sans-serif;
+}
+
+main{
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: linear-gradient(to bottom right, #183E41, #5C5D5E);
+  color: white;
+}
+
+nav{
+  -webkit-box-shadow: 0 8px 6px -6px rgba(35, 63, 26, 0.2);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 0 8px 6px -6px rgba(35, 63, 26, 0.2);  /* Firefox 3.5 - 3.6 */
+    box-shadow: 0 8px 6px -6px rgba(35, 63, 26, 0.2);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+.counts{
+  text-align: center;
+    background-image: url("https://na.rdcpix.com/90885237/8ecb8b5c10a19ccbe1daba7bc38ec77cw-c303855xd-w685_h860_q80.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: white;
+    font-size: 80px !important;
+}
+
+.navbar-brand>img{
+  width: 200px;
+}
+.indicator-item.active {
+  background-color: #adaeb3;
+
+}
+.mr-top{
+  margin-top: 20px;
+}
+.mr-bot{
+  margin-bottom: 50px;
+}
+.fi-sect{
+  padding: 10px;
+}
+footer {
+  color: #adaeb3;
+}
+
+.underline {
+  border-bottom: solid 1px;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  height: 70px;
+  box-shadow: none !important;
+  border-bottom: 1px solid #eae2e2;
+}
+.imagen {
+  width: 100%;
+}
+#logo {
+  max-width: 40%;
+  padding: 10px;
+}
+
+#pagecontent {
+position: relative;
+top : 100vh;
+}
+nav ul a, nav .brand-logo.center {
+  color: rgba(0,0,0,0.7)
+}
+.slider .indicators .indicator-item {
+  background-color: rgba(0,0,0,0.3)
+}
+
+.background-white {
+  background-color: rgba(255,255,255,0.6);
+  position: relative;
+  top:35%;
+}
+
+
+.carousel-item{
+  height: 100vh !important;
+}
+.carousel-logo{
+  width: 40% !important;
+}
