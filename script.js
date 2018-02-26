@@ -19,7 +19,7 @@ $('.count').each(function () {
     });
 });
 
-/*let grafico1 = document.getElementById('grafico1').getContext('2d');
+let grafico1 = document.getElementById('grafico1').getContext('2d');
 let Chart1 = new Chart(grafico1, {
       type: 'pie',
       data: {
@@ -38,7 +38,7 @@ let Chart1 = new Chart(grafico1, {
       },
       options: {
         legend: {
-            display: false
+            // display: false
          },
          tooltips: {
             enabled: false
@@ -128,4 +128,4 @@ let Chart4 = new Chart(grafico4, {
             enabled: false
          }
       }
-    });*/
+    });
