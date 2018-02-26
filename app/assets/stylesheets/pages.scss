@@ -1,3 +1,6 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
 *{
   box-sizing: border-box;
 
@@ -7,7 +10,7 @@
 .gap{
   padding: 20px !important;
 
- 
+
 }
 
 
@@ -33,7 +36,7 @@
 
 
 .project-title{
-  
+
   padding: 10px;
   font-family: 'Anton', sans-serif;
   color: #474747;
@@ -45,9 +48,9 @@ main{
   padding-top: 50px;
   border-bottom: 1px solid #c8c8c8;
   padding-bottom: 50px;
- 
+
   color: #183E41;
-  
+
 }
 
 nav{
@@ -65,7 +68,7 @@ nav{
     background-size: cover;
     padding-top: 100px;
     padding-bottom: 100px;
-  
+
     background-position: bottom;
     background-attachment: fixed;
 }
@@ -168,11 +171,11 @@ footer{
 }
 
 .more{
-      
+
       padding:  10px;
       text-decoration: none !important;
       color: #474747;
-      
+
 }
 
 .link{
