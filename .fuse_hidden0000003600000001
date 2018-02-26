@@ -7,11 +7,12 @@
   <link href="https://fonts.googleapis.com/css?family=Anton|PT+Serif" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="script.js"></script>
   </head>
 
   <body>
-
+    
      <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
           <img src="images/Logo-01-01.png">
@@ -43,96 +44,70 @@
               <a class="nav-link disabled" href="#">Disabled</a>
             </li>
           </ul>
-
+          
         </div>
       </nav>
 
-    <div class="container-fluid mr-top">
+    <div class="container">
+      <div class="row underline">
+        <div class="col s2">
+          <h4 class="">Projects</h4>
+        </div>
+      </div>
+
       <div class="row">
-        <div class="col s2 text-center">
-          <h4 class="title-h ">Projects</h4>
-        </div>
-      </div>
-
-      <div class="row mr-top underline alice">
-        
-        
-
-        <div class="col-md-4">
+        <h5>Project 1</h5>
+        <div class="col s7">
           <img class="imagen" src="http://thekorgroup.com/wp-content/uploads/2016/06/Avalon_Dec2015_CabanaStraightWide_B_LR-1.jpg" alt="">
         </div>
-
-        <div class="col-md-4">
-          <canvas id="grafico1" height="150px"></canvas>
+        <div class="col s4">
+          <canvas id="grafico1" height="250px"></canvas>
         </div>
-
-        <div class="col-md-4 content boxed">
-          <h5 class="project-title">Los Robles</h5>
+        <div class="col s12 underline">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, possimus voluptatem unde sit modi voluptas alias tempore enim, aliquam maiores. Atque ad architecto natus quasi eveniet maxime, nostrum aspernatur eum.
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, corrupti, commodi quisquam provident culpa, possimus cum animi, laboriosam minus consectetur eligendi minima. Officiis culpa id vel voluptas, dolorem magni necessitatibus.</p>
-          <button class="btn btn-info">See More<i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
-
-
-      <div class="row mr-top underline alice">
-        <div class="col-md-4 content boxed">
-          <h5 class="project-title">Los Robles</h5>
+      <div class="row">
+        <h5>Project 2</h5>
+        <div class="col s4">
+          <canvas id="grafico2" height="250px"></canvas>
+        </div>
+        <div class="col s7">
+          <img class="imagen" src="http://thekorgroup.com/wp-content/uploads/2016/08/20151113_KOR_AustinProper_Exteriors_RevisedFinal_Cam02_FINAL-resized.jpg" alt="">
+        </div>
+        <div class="col s12 underline">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, possimus voluptatem unde sit modi voluptas alias tempore enim, aliquam maiores. Atque ad architecto natus quasi eveniet maxime, nostrum aspernatur eum.
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, corrupti, commodi quisquam provident culpa, possimus cum animi, laboriosam minus consectetur eligendi minima. Officiis culpa id vel voluptas, dolorem magni necessitatibus.</p>
-          <button class="btn btn-info">See More<i class="fas fa-chevron-right"></i></button>
         </div>
-
-        <div class="col-md-4">
-          <canvas id="grafico2" height="150px"></canvas>
-        </div>
-        
-
-        <div class="col-md-4">
-          <img class="imagen" src="http://thekorgroup.com/wp-content/uploads/2016/06/Avalon_Dec2015_CabanaStraightWide_B_LR-1.jpg" alt="">
-        </div>  
       </div>
-
-      <div class="row mr-top underline alice">
-        
-        
-
-        <div class="col-md-4">
-          <img class="imagen" src="http://thekorgroup.com/wp-content/uploads/2016/06/Avalon_Dec2015_CabanaStraightWide_B_LR-1.jpg" alt="">
+      <div class="row">
+        <h5>Project 3</h5>
+        <div class="col s7">
+          <img class="imagen" src="http://thekorgroup.com/wp-content/uploads/2016/08/Edison_LongBeach_ExteriorAngle_V1_Meghanbob_HR.jpg" alt="">
         </div>
-
-        <div class="col-md-4">
-          <canvas id="grafico3" height="150px"></canvas>
+        <div class="col s4">
+          <canvas id="grafico3" height="250px"></canvas>
         </div>
-
-        <div class="col-md-4 content boxed">
-          <h5 class="project-title">Los Robles</h5>
+        <div class="col s12 underline">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, possimus voluptatem unde sit modi voluptas alias tempore enim, aliquam maiores. Atque ad architecto natus quasi eveniet maxime, nostrum aspernatur eum.
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, corrupti, commodi quisquam provident culpa, possimus cum animi, laboriosam minus consectetur eligendi minima. Officiis culpa id vel voluptas, dolorem magni necessitatibus.</p>
-          <button class="btn btn-info">See More<i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
-
-
-      <div class="row mr-top underline alice">
-        <div class="col-md-4 content boxed">
-          <h5 class="project-title">Los Robles</h5>
+      <div class="row">
+        <h5>Project 2</h5>
+        <div class="col s4">
+          <canvas id="grafico4" height="250px"></canvas>
+        </div>
+        <div class="col s7">
+          <img class="imagen" src="http://thekorgroup.com/wp-content/uploads/2016/07/marc_aerial.jpg" alt="">
+        </div>
+        <div class="col s12">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, possimus voluptatem unde sit modi voluptas alias tempore enim, aliquam maiores. Atque ad architecto natus quasi eveniet maxime, nostrum aspernatur eum.
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, corrupti, commodi quisquam provident culpa, possimus cum animi, laboriosam minus consectetur eligendi minima. Officiis culpa id vel voluptas, dolorem magni necessitatibus.</p>
-          <button class="btn btn-info">See More<i class="fas fa-chevron-right"></i></button>
         </div>
-
-        <div class="col-md-4">
-          <canvas id="grafico4" height="150px"></canvas>
-        </div>
-        
-
-        <div class="col-md-4">
-          <img class="imagen" src="http://thekorgroup.com/wp-content/uploads/2016/06/Avalon_Dec2015_CabanaStraightWide_B_LR-1.jpg" alt="">
-        </div>  
       </div>
-      
-
+    </div>
     <footer class="page-footer grey lighten-4">
         <div class="container">
           <div class="row">
@@ -155,12 +130,13 @@
           </div>
         </div>
       </footer>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script type="text/javascript" src="script.js">
+    </script>
 
    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
   </body>
 </html>
