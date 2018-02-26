@@ -6,8 +6,10 @@
 
 .gap{
   padding: 20px !important;
+
  
 }
+
 
 .content{
   font-family: 'PT Serif', serif;
@@ -20,11 +22,12 @@
 
 main{
   text-align: center;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  background: linear-gradient(to bottom right, #183E41, #5C5D5E);
-  color: white;
-  box-shadow: inset 0px -1px 1px 3px #0105064f;
+  padding-top: 50px;
+  border-bottom: 1px solid #c8c8c8;
+  padding-bottom: 50px;
+ 
+  color: #183E41;
+  
 }
 
 nav{
@@ -45,6 +48,10 @@ nav{
     color: white;
     font-size: 80px !important;
     background-position: bottom;
+    background-attachment: fixed;
+}
+.fa-chevron-right{
+  margin-left: 10px;
 }
 
 .navbar-brand>img{
@@ -121,20 +128,31 @@ footer{
 }
 
 .home-projects{
-  
+  margin: 0px !important;
+  box-shadow: 1px 1px 1px #c8c8c8;
+}
+
+.home-projects:hover{
   box-shadow: 1px 1px 1px #c8c8c8;
 }
 
 .home-projects-box{
   text-align: center;
+
 }
 
 .more{
-      background: linear-gradient(to right, #f5efef , white);
+      
       padding:  10px;
       text-decoration: none !important;
       color: #474747;
       
+}
+
+.link{
+  padding:  10px;
+  border: 1px solid #c8c8c8;
+  text-align: right;
 }
 
 .more:hover{
