@@ -23,8 +23,8 @@ $('.count').each(function () {
     });
 });
 
-let grafico1 = document.getElementById('grafico1').getContext('2d');
-let Chart1 = new Chart(grafico1, {
+var grafico1 = document.getElementById('grafico1').getContext('2d');
+var Chart1 = new Chart(grafico1, {
       type: 'pie',
       data: {
         labels:['Left', 'Current'],
@@ -52,8 +52,8 @@ let Chart1 = new Chart(grafico1, {
 
 
 
-let grafico2 = document.getElementById('grafico2').getContext('2d');
-let Chart2 = new Chart(grafico2, {
+var grafico2 = document.getElementById('grafico2').getContext('2d');
+var Chart2 = new Chart(grafico2, {
       type: 'pie',
       data: {
         labels:['Left', 'Current'],
@@ -80,8 +80,8 @@ let Chart2 = new Chart(grafico2, {
     });
 
 
-let grafico3 = document.getElementById('grafico3').getContext('2d');
-let Chart3 = new Chart(grafico3, {
+var grafico3 = document.getElementById('grafico3').getContext('2d');
+var Chart3 = new Chart(grafico3, {
       type: 'pie',
       data: {
         labels:['Left', 'Current'],
@@ -107,8 +107,8 @@ let Chart3 = new Chart(grafico3, {
       }
     });
 
-let grafico4 = document.getElementById('grafico4').getContext('2d');
-let Chart4 = new Chart(grafico4, {
+var grafico4 = document.getElementById('grafico4').getContext('2d');
+var Chart4 = new Chart(grafico4, {
       type: 'pie',
       data: {
         labels:['Left', 'Current'],
