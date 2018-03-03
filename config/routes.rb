@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :photos
   resources :projects
   get 'pages/index'
 
