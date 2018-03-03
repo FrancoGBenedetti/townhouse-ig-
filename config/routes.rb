@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :photos
+  resources :projects
   get 'pages/index'
 
   get 'pages/about'
