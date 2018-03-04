@@ -14,7 +14,7 @@
 
 <%= form_with(model: [@project, Photo.new], local: true) do |f| %>
   <%= f.file_field :image %>
-  <%= f.submit :añadir_foto %>
+  <%= f.submit :'add image' %>
 <% end %>
 
 

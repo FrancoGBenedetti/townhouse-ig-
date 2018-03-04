@@ -3,12 +3,14 @@
     <thead>
       <tr>
         <th>Name</th>
+        <th>Nº Photos</th>
         <th>Actions</th>
       </tr>
     </thead>
     <% @projects.each do |project| %>
       <tr>
         <td><%= link_to project.name, project_path(project) %></td>
+        <td><%= project.photos.count %></td>
         <td><%= link_to 'Edit', edit_project_path(project), class: 'btn btn-primary btn-sm' %></td>
         <td><%= link_to 'Delete', project_path(project), method: :delete, class: 'btn btn-danger btn-sm' %></td>
       </tr>
