@@ -3,9 +3,9 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { registrations: "registrations"}
 
-  resources :photos
-
-  resources :projects
+  resources :projects do
+    resources :photos
+  end
 
   get 'admin',to: 'admin#index'
 

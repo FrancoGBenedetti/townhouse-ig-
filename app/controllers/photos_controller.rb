@@ -25,16 +25,15 @@ class PhotosController < ApplicationController
   # POST /photos.json
   def create
     @photo = Photo.new(photo_params)
-    @photo.project_id = params[:project_id]
     @project = Project.find(params[:project_id])
-    respond_to do |format|
-      if @photo.save
-        format.html { redirect_to @project, notice: 'Photo was successfully created.' }
-        format.json { render :show, status: :created, location: @photo }
-      else
-        format.html { render :new }
-        format.json { render json: @photo.errors, status: :unprocessable_entity }
-      end
+
+    @photo.project = @project
+
+    
+    if @photo.save
+      redirect_to @project, notice: 'Photo was successfully'
+    else
+      redirect_to @project, notice: 'error al crear la foto'
     end
   end
 
