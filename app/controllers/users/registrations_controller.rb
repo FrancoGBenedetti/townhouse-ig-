@@ -4,6 +4,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
+  before_action :one_user_registered?, only: [:new, :create]
+
+
   # GET /resource/sign_up
   # def new
   #   super
@@ -40,6 +43,15 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # protected
 
+  protected
+
+  def one_user_registered?
+    if ((User.count == 1) & (user_signed_in?))
+      redirect_to root_path
+    elsif User.count == 1
+      redirect_to new_user_session_path
+    end
+  end
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_up_params
   #   devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute])
