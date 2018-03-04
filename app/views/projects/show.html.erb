@@ -9,6 +9,17 @@
   <strong>Description:</strong>
   <%= @project.description %>
 </p>
+<p>images of the project</p>
+
+<%= form_with(model: Photo.new, local: true) do |f| %>
+  <%= hidden_field_tag :project_id, @project.id %>
+  <%= f.text_area :image %>
+  <%= f.submit :añadir_foto %>
+<% end %>
+
+<% @project.photos.each do |photo| %>
+  <%= image_tag photo.image %>
+<% end %>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>

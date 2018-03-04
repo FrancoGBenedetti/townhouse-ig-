@@ -1,1 +1,13 @@
 <%= render 'shared/navbaradmin' %>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <% @projects.each do |project| %>
+    <tr>
+      <td><%= link_to project.name, project_path(project) %></td>
+    </tr>
+  <% end %>
+</table>
