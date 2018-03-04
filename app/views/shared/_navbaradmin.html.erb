@@ -18,6 +18,11 @@
         <%= link_to 'Add Project', new_project_path, class: 'nav-link btn btn-secondary' %>
       </li>
     </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+      </li>
+    </ul>
 
   </div>
 </nav>
