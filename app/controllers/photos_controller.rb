@@ -1,20 +1,11 @@
 class PhotosController < ApplicationController
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
-  # GET /photos
-  # GET /photos.json
-  def index
-    @photos = Photo.all
-  end
+
 
   # GET /photos/1
   # GET /photos/1.json
   def show
-  end
-
-  # GET /photos/new
-  def new
-    @photo = Photo.new
   end
 
   # GET /photos/1/edit
@@ -29,7 +20,7 @@ class PhotosController < ApplicationController
 
     @photo.project = @project
 
-    
+
     if @photo.save
       redirect_to @project, notice: 'Photo was successfully'
     else
@@ -54,11 +45,12 @@ class PhotosController < ApplicationController
   # DELETE /photos/1
   # DELETE /photos/1.json
   def destroy
+
     @photo.destroy
-    respond_to do |format|
-      format.html { redirect_to photos_url, notice: 'Photo was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    @project = Project.find(params[:project_id])
+    
+    redirect_to @project, notice: 'Photo was successfully'
+
   end
 
   private

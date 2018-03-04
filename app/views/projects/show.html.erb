@@ -18,6 +18,7 @@
 
 <% @project.photos.each do |photo| %>
   <%= image_tag photo.image %>
+  <%= link_to 'x', project_photo_path(@project,photo), method: :delete %>
 <% end %>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
