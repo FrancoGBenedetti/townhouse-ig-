@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
-  devise_for :users
-  resources :photos
-  resources :projects
+  # devise_for :users
+
+  devise_for :users, controllers: { registrations: "registrations"}
+
+  resources :projects do
+    resources :photos, only: [:create, :destroy]
+  end
+
+  get 'admin',to: 'admin#index'
+
   get 'pages/index'
 
   get 'pages/about'
