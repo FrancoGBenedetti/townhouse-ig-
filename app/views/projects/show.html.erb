@@ -6,8 +6,9 @@
 
 <div class="sp-loading"><%= image_tag 'sp-loading.gif' %><br>Cargando imagenes</div>
 <div class="sp-wrap">
-	<a href="images/1.jpg"><img src="images/1_tb.jpg" alt=""></a>
-	<a href="images/2.jpg"><img src="images/2_tb.jpg" alt=""></a>
+	<% @project.photos.each do |photo| %>
+		<a href="<%= photo.image %>"><%= image_tag photo.image %></a>
+	<% end %>
 </div>
 
 <p>
@@ -18,27 +19,7 @@
 <p>
   <strong>Description:</strong>
   <%= @project.description %>
-</p>
-<p>images of the project</p>
-
-<%= form_with(model: [@project, Photo.new], local: true) do |f| %>
-  <%= f.file_field :image %>
-  <%= f.submit :'add image' %>
-<% end %>
-
-
-<div class="container">
-  <div class="row">
-    <% @project.photos.each do |photo| %>
-      <div class="col-md-3">
-        <%= image_tag photo.image, class: 'img-thumbnail', width: '250px' %>
-        <%= link_to 'x', project_photo_path(@project,photo), method: :delete, class: 'btn btn-danger btn-sm' %>
-      </div>
-    <% end %>
-  </div>
-</div>
-
-<script type="text/javascript">
+	<script type="text/javascript">
     /* wait for images to load */
     $(window).load( function() {
         $('.sp-wrap').smoothproducts();

@@ -2,5 +2,27 @@
 
 <%= render 'form', project: @project %>
 
+
+</p>
+<p>images of the project</p>
+
+<%= form_with(model: [@project, Photo.new], local: true) do |f| %>
+  <%= f.file_field :image %>
+  <%= f.submit :'add image' %>
+<% end %>
+
+
+<div class="container">
+  <div class="row">
+    <% @project.photos.each do |photo| %>
+      <div class="col-md-3">
+        <%= image_tag photo.image, class: 'img-thumbnail', width: '250px' %>
+        <%= link_to 'x', project_photo_path(@project,photo), method: :delete, class: 'btn btn-danger btn-sm' %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
 <%= link_to 'Show', @project %> |
 <%= link_to 'Back', admin_path %>
