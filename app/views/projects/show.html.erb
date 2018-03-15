@@ -1,6 +1,15 @@
 <p id="notice"><%= notice %></p>
 <%= link_to 'Edit', edit_project_path(@project), class: 'btn btn-info mt-4' %>
 <%= link_to 'Back', admin_path, class:'btn btn-info mt-4' %>
+<!-- GALERIA DE PRODUCTOS -->
+
+
+<div class="sp-loading"><%= image_tag 'sp-loading.gif' %><br>Cargando imagenes</div>
+<div class="sp-wrap">
+	<a href="images/1.jpg"><img src="images/1_tb.jpg" alt=""></a>
+	<a href="images/2.jpg"><img src="images/2_tb.jpg" alt=""></a>
+</div>
+
 <p>
   <strong>Name:</strong>
   <%= @project.name %>
@@ -28,3 +37,10 @@
     <% end %>
   </div>
 </div>
+
+<script type="text/javascript">
+    /* wait for images to load */
+    $(window).load( function() {
+        $('.sp-wrap').smoothproducts();
+    });
+</script>

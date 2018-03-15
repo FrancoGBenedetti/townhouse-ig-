@@ -1,6 +1,3 @@
-// Place all the styles related to the Projects controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 /* Needed for the lightbox */
 
 html, body {
@@ -35,7 +32,7 @@ html, body {
 	/**************
 	  Set max-width to your thumbnail width
 	***************/
-
+	
 	max-width: 300px;
 }
 
