@@ -1,24 +1,58 @@
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid show-body">
+  <div class="row">
+
+    <div class="col-md-2">
+      <h2>Widget otros proyectos</h2>
+    </div>
+
+    <div class="col-md-7">
+      <p>
+        <strong>Name:</strong>
+        <%= @project.name %>
+      </p>
+
+      <!-- GALERIA DE PRODUCTOS -->
+      <div class="sp-loading"><%= image_tag 'sp-loading.gif' %><br>Cargando imagenes</div>
+      <div class="sp-wrap">
+        <% @project.photos.each do |photo| %>
+          <a href="<%= photo.image %>"><%= image_tag photo.image %></a>
+        <% end %>
+      </div>
+      <!-- FIN GALERIA DE PRODUCTOS -->
+
+      <p>
+        <strong>Description:</strong>
+        <%= @project.description %>
+      </p>
+
+      
+
+    </div>
+
+    <div class="col-md-3">
+      <h2>Formulario de contacto</h2>
+    </div>
+
+
+  </div>
+
+ 
+</div>
+
 <p id="notice"><%= notice %></p>
 <%= link_to 'Edit', edit_project_path(@project), class: 'btn btn-info mt-4' %>
 <%= link_to 'Back', admin_path, class:'btn btn-info mt-4' %>
-<!-- GALERIA DE PRODUCTOS -->
 
-
-<div class="sp-loading"><%= image_tag 'sp-loading.gif' %><br>Cargando imagenes</div>
-<div class="sp-wrap">
-	<% @project.photos.each do |photo| %>
-		<a href="<%= photo.image %>"><%= image_tag photo.image %></a>
-	<% end %>
-</div>
-
-<p>
-  <strong>Name:</strong>
-  <%= @project.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
 	<script type="text/javascript">
     /* wait for images to load */
     $(window).load( function() {

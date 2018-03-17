@@ -26,7 +26,7 @@ class ProjectsController < ApplicationController
   # POST /projects.json
   def create
     @project = Project.new(project_params)
-    byebug
+    
     respond_to do |format|
       if @project.save
         format.html { redirect_to   admin_path, notice: 'Project was successfully created.' }
