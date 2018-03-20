@@ -290,9 +290,34 @@ footer{
 }
 
 
+.bkg-about{
+  background-image: url("/assets/bkg-count.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    background-position: bottom;
+    background-attachment: fixed;
+    overflow: hidden;
+    .tint {
+        overflow: hidden;
+        background-color: rgba(76,76,76,0.37);
+        padding: 20px;
+        
+       
+        
+      }
 
+    h3{
+      
+      color: white;
+      font-family: 'Timmana', sans-serif;
+      font-size: 50px;
+    }
+
+}
 .alice{
   padding: 50px;
+  text-align: center;
 }
 
 .alice > img{
@@ -304,4 +329,10 @@ footer{
   background-color: #f6f6f6;
   border: 1px solid #d8d8d8;
   color: #474747;
+}
+.boxed-style{
+ transition: all 0.9s;
+}
+.boxed-style:hover{
+  transform: scale(1.05);
 }
