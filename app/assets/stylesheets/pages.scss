@@ -13,8 +13,12 @@ body{
   box-shadow: inset 0px 0px 5px #d4d4d4;
  }
 
+ .elegant{
+  box-shadow: 0px 0px 4px rgba(68,68,68,0.6) !important;
+ }
+
 nav{
-  box-shadow: 0px 0px 4px #d4d4d4 !important;
+  box-shadow: 0px 0px 4px rgba(68,68,68,0.6) !important;
     border-bottom: 1px solid #c8c8c8 !important; 
  }
 
@@ -56,21 +60,26 @@ nav{
 
 .content{
   font-family: 'PT Serif', serif;
+  span{
+    font-weight: bolder !important;
+    font-size: 1em;
+  }
 }
 .title{
-  font-family: 'Anton', sans-serif;
+  font-family: 'Timmana', sans-serif;
   
   display: inline-block;
   color: #474747
 }
 
 .title-h{
-  font-family: 'Anton', sans-serif;
+  font-family: 'Timmana', sans-serif;
  
   padding-left: 5px;
-  display: inline-block;
+  
   color: #474747;
   font-size: 50px;
+  border-bottom: 1px solid #c8c8c8;
 }
 
 
@@ -79,9 +88,44 @@ nav{
 .project-title{
 
   padding: 10px;
-  font-family: 'Anton', sans-serif;
+  font-family: 'Timmana', sans-serif;
   color: #474747;
 
+}
+
+.parent-link:hover .link-to-projects{
+  transform: scale(1.05);
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+  a{
+    background-color: rgba(0, 0, 0, 0.38);
+  }
+  
+}
+
+.link-to-projects{
+  background: linear-gradient(to bottom, #669999 0%, #006666 99%);
+  height: 100%;
+  text-align: right;
+  background-image: url("slide1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-filter: grayscale(0.5);
+  filter: grayscale(0.5);
+  transition: all .8s;
+
+  
+
+  a{
+    color: white;
+    font-family: 'Timmana', sans-serif;
+    background-color: rgba(0, 0, 0, 0.58);
+    padding: 3%;
+    transition: all .8s;
+    
+  }
+  
 }
 
 main{
@@ -89,8 +133,11 @@ main{
   padding-top: 50px;
   border-bottom: 1px solid #c8c8c8;
   padding-bottom: 50px;
-
-  color: #183E41;
+  background: linear-gradient(to bottom, #669999 0%, #006666 99%);
+  color: white;
+  h1{
+    color: white !important;
+  }
 
 }
 
@@ -167,7 +214,7 @@ nav {
 
 #pagecontent {
 position: relative;
-top : 100vh;
+top: 100vh;
 }
 nav ul a, nav .brand-logo.center {
   color: rgba(0,0,0,0.7)
@@ -185,13 +232,32 @@ nav ul a, nav .brand-logo.center {
 
 .carousel-item{
   height: 100vh !important;
+  .slide1{
+    
+  }
+  
   .carousel-caption{
-    margin: auto !important;  
-    width: 30rem;
-    top: 5% !important;
-    bottom: none !important;
-    -webkit-filter: drop-shadow(12px 12px 15px rgba(0, 0, 0, 0.8));
-    -webkit-filter: opacity(0.8);
+    left: 60% !important;
+    right: 0 !important;
+    padding: 10px;
+    top: 8% !important;
+    bottom: auto !important;
+    
+    text-align: right !important;
+    border-bottom: 1px solid #c8c8c8;
+
+
+    .logo-caption{
+      width: 18rem;
+    }
+    
+    
+    -webkit-filter: opacity(0.9);
+    h5{
+      color: white; 
+      font-size: 3rem;
+      font-family: 'Timmana', sans-serif;
+    }
   }
 
 }
