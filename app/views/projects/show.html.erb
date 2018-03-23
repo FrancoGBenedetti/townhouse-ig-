@@ -6,12 +6,15 @@
       <h2>Widget otros proyectos</h2>
     </div>
 
-    <div class="col-md-7 show-content" style="background-color: #f8f8f8;">
-      <p class="title-h">
+    <div class="col-md-7 show-content" >
+      
+      <p class="title-h d-inline-block">
         
         <%= @project.name %>
       </p>
-
+      <figure class="figure text-center">
+          <%= image_tag 'acacioslogo.jpg', class: 'figure-img img-fluid', style: 'width: 10rem;' %>
+      </figure>
       <!-- GALERIA DE PRODUCTOS -->
       <div class="sp-loading"><%= image_tag 'sp-loading.gif' %><br>Cargando imagenes</div>
       <div class="sp-wrap">

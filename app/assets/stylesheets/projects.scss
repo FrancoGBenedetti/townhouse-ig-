@@ -13,6 +13,13 @@ html, body {
 .show-body{
 	background-color: white;
 	padding: 5%;
+	.content{
+		text-align: justify;
+	}
+}
+
+.title-show{
+
 }
 
 /* CSS for the loading div */
@@ -33,13 +40,13 @@ html, body {
 	display: none;
 	line-height: 0;
 	font-size: 0;
-	background: #eee;
+	//background: #eee;
 	border: 1px solid #d8d8d8;
-	border-radius: 3px;
+	//border-radius: 3px;
 	position: relative;
 	margin: 0 25px 15px 0;
 	float: left;
-	box-shadow: 1px 1px 1px #eee;
+	box-shadow: 0px 0px 2px #eee;
 	padding: 5px;
 	/**************
 	  Set max-width to your thumbnail width
