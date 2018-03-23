@@ -7,6 +7,11 @@ body{
   box-shadow: 0px 0px 1px #474747;
  }
 
+ $font-title: 'Fjalla One', sans-serif;
+ $font-content: 'Abel', sans-serif;
+
+ 
+
  .skin{
   background-color: white;
   
@@ -59,21 +64,21 @@ nav{
 }
 
 .content{
-  font-family: 'PT Serif', serif;
+  font-family: $font-content;
   span{
     font-weight: bolder !important;
     font-size: 1em;
   }
 }
 .title{
-  font-family: 'Timmana', sans-serif;
+  font-family: $font-title;
   
   display: inline-block;
   color: #474747
 }
 
 .title-h{
-  font-family: 'Timmana', sans-serif;
+  font-family: $font-title;
  
   padding-left: 5px;
   
@@ -88,9 +93,18 @@ nav{
 .project-title{
 
   padding: 10px;
-  font-family: 'Timmana', sans-serif;
-  color: #474747;
+  font-family: $font-title;
+  color: #47a4b6;
+  font-size: 2rem;
+  
+  
 
+}
+
+.desc-breve{
+  border: 1px solid #c8c8c8;
+  padding: 10px;
+  font-family: $font-content;
 }
 
 .parent-link:hover .link-to-projects{
@@ -98,31 +112,34 @@ nav{
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
   a{
-    background-color: rgba(0, 0, 0, 0.38);
+    
   }
   
 }
 
 .link-to-projects{
-  background: linear-gradient(to bottom, #669999 0%, #006666 99%);
+  //background-color: #07293a;
   height: 100%;
   text-align: right;
-  background-image: url("slide1.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-filter: grayscale(0.5);
-  filter: grayscale(0.5);
+  //background-image: url("slide1.jpg");
+  //background-size: cover;
+  //background-repeat: no-repeat;
+  //background-position: center center;
+  //-webkit-filter: opacity(0.8);
+  //filter: opacity(0.8);
   transition: all .8s;
+  background: linear-gradient(to bottom, #669999 0%, #006666 99%);
+  //background-blend-mode: overlay;
 
   
 
   a{
-    color: white;
-    font-family: 'Timmana', sans-serif;
-    background-color: rgba(0, 0, 0, 0.58);
+    color: #c8c8c8;
+    font-family: $font-title;
+    //background-color: rgba(0, 0, 0, 0.58);
     padding: 3%;
     transition: all .8s;
+    border: 1px solid white;
     
   }
   
@@ -237,18 +254,18 @@ nav ul a, nav .brand-logo.center {
   }
   
   .carousel-caption{
-    left: 60% !important;
-    right: 0 !important;
+    
     padding: 10px;
     top: 8% !important;
     bottom: auto !important;
     
-    text-align: right !important;
-    border-bottom: 1px solid #c8c8c8;
+    text-align: center !important;
+    
 
 
-    .logo-caption{
+    img{
       width: 18rem;
+      display: inline-block;
     }
     
     
@@ -256,7 +273,9 @@ nav ul a, nav .brand-logo.center {
     h5{
       color: white; 
       font-size: 3rem;
-      font-family: 'Timmana', sans-serif;
+      font-family: $font-title;
+      display: inline-block;
+      border-left: 1px solid #c8c8c8;
     }
   }
 
@@ -271,6 +290,17 @@ footer{
 .home-projects{
   margin: 0px !important;
   box-shadow: 0px 0px 6px #c8c8c8 !important;
+      overflow: hidden;
+    position: relative;
+    figcaption{
+      position: absolute;
+    bottom: 0px;
+    background-color: #ffffffab;
+    widht: 100%;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    }
 }
 
 .home-projects:hover{
@@ -285,8 +315,8 @@ footer{
 
 .link{
   padding:  10px;
-  border: 1px solid #c8c8c8;
-  text-align: right;
+  
+  text-align: center;
 }
 
 
@@ -310,7 +340,7 @@ footer{
     h3{
       
       color: white;
-      font-family: 'Timmana', sans-serif;
+      font-family: $font-title;
       font-size: 50px;
     }
 
