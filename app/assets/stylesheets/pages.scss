@@ -303,6 +303,10 @@ footer{
     display: inline-block;
     width: 100%;
     overflow: hidden;
+    transition: all .8s;
+    }
+    figcaption:hover{
+      padding: 1rem;
     }
 }
 
