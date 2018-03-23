@@ -5,6 +5,10 @@
 
 </p>
 <p>images of the project</p>
+<h3> LOGO</h3>
+<% if @project.logo.present? %>
+  <%= image_tag @project.logo %>
+<% end %>
 
 <%= form_with(model: [@project, Photo.new], local: true) do |f| %>
   <%= f.file_field :image %>
