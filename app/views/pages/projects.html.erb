@@ -26,7 +26,7 @@
         </figure>
         <p class="desc-breve">6 casas; 3 pisos; 3 y 4 dormitorios; 3 baños; estar/ home office; patio y terraza panorámica. </p>
 
-      <%= link_to project_path(Project.first), class:'btn btn-info' do %>
+      <%= link_to project_path(Project.first), data: { turbolinks: false }, class:'btn btn-info' do %>
         See More<i class="fas fa-chevron-right"></i>
       <% end %>
     </div>
