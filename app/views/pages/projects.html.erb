@@ -11,7 +11,7 @@
 
 
     <div class="col-md-6">
-      
+
        <figure class="figure">
           <%= image_tag 'pintor.jpg', class: 'figure-img img-fluid imagen' %>
         </figure>
@@ -20,13 +20,15 @@
 
     <div class="col-md-6  ">
 
-      
+
       <figure class="figure">
           <%= image_tag 'acacioslogo.jpg', class: 'figure-img img-fluid', style: 'width: 15rem;' %>
         </figure>
         <p class="desc-breve">6 casas; 3 pisos; 3 y 4 dormitorios; 3 baños; estar/ home office; patio y terraza panorámica. </p>
-      
-      <button class="btn btn-info">See More<i class="fas fa-chevron-right"></i></button>
+
+      <%= link_to project_path(Project.first) , class:'btn btn-info' do %>
+        See More<i class="fas fa-chevron-right"></i>
+      <% end %>
     </div>
   </div>
 
@@ -35,21 +37,21 @@
 
 
 
-    
+
 
     <div class="col-md-6  ">
 
-      
+
       <figure class="figure">
           <%= image_tag 'acacioslogo.jpg', class: 'figure-img img-fluid', style: 'width: 15rem;' %>
         </figure>
         <p class="desc-breve">6 casas; 3 pisos; 3 y 4 dormitorios; 3 baños; estar/ home office; patio y terraza panorámica. </p>
-      
+
       <button class="btn btn-info">See More<i class="fas fa-chevron-right"></i></button>
     </div>
 
     <div class="col-md-6">
-      
+
        <figure class="figure">
           <%= image_tag 'pintor.jpg', class: 'figure-img img-fluid imagen' %>
         </figure>
@@ -62,7 +64,7 @@
 
 
     <div class="col-md-6">
-      
+
        <figure class="figure">
           <%= image_tag 'pintor.jpg', class: 'figure-img img-fluid imagen' %>
         </figure>
@@ -71,19 +73,12 @@
 
     <div class="col-md-6  ">
 
-      
+
       <figure class="figure">
           <%= image_tag 'acacioslogo.jpg', class: 'figure-img img-fluid', style: 'width: 15rem;' %>
         </figure>
         <p class="desc-breve">6 casas; 3 pisos; 3 y 4 dormitorios; 3 baños; estar/ home office; patio y terraza panorámica. </p>
-      
+
       <button class="btn btn-info">See More<i class="fas fa-chevron-right"></i></button>
     </div>
   </div>
-
-
-  
-
-
-  
-  
