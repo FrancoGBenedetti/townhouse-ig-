@@ -49,7 +49,9 @@
 
 	<script type="text/javascript">
     /* wait for images to load */
-    $(window).load( function() {
-        $('.sp-wrap').smoothproducts();
+    $(document).on('turbolinks:load', function() {
+      $(window).load( function() {
+          $('.sp-wrap').smoothproducts();
+      });
     });
 </script>
