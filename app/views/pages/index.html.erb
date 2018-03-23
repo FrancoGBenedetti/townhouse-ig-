@@ -10,7 +10,7 @@
 
   <div class="carousel-inner">
     <div class="carousel-item active">
-        
+
         <%= image_tag("slide1.jpg", class: "d-block w-100 slide1" ) %>
         <div class="carousel-caption d-none d-md-block d-flex align-items-center">
          <%= image_tag "Logowhite-01.png"  %>
@@ -21,10 +21,10 @@
     </div>
 
     <!--<div class="carousel-item">
-     
+
         <%= image_tag("slide2.jpg", class: "d-block w-100" ) %>
         <div class="">
-          
+
         <h5>...</h5>
         <p>...</p>
       </div>
@@ -59,7 +59,14 @@
         name is <span>Townhouse IG.</span>
       </p>
       <button class="btn btn-info">More about Townhouse IG<i class="fas fa-chevron-right"></i></button>
-      <button class="btn btn-info">Proyectos<i class="fas fa-chevron-down"></i></button>
+      <div class="dropdown mt-2">
+        <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">Proyects</button>
+        <ul class="dropdown-menu">
+          <% @projects.each do |project| %>
+            <li><%= link_to project.name, project_path(project) %></a></li>
+          <% end %>
+        </ul>
+      </div>
     </div>
     <div class="col-xs-2 col-md-2 col-lg-2">
 
@@ -70,7 +77,7 @@
 <div class="container-fluid pd-100 metal-bkg ">
   <div class="row ">
     <div class="col-md-12 text-left">
-      
+
       <h3 class="title-h ">Projects</h3>
 
     </div>
@@ -81,11 +88,11 @@
           <h3 class="">Go to Projects</h3>
         </a>
       </div>
-      
-      
+
+
     </div>
 
-    
+
 
     <div class="col-md-5 gap" >
       <a href="">
@@ -113,11 +120,11 @@
 
     </div>
 
-    
 
-    
 
-    
+
+
+
 
   </div>
 </div>
