@@ -9,27 +9,52 @@
   </ol>
 
   <div class="carousel-inner">
+
+    
     <div class="carousel-item active">
-
-        <%= image_tag("slide1.jpg", class: "d-block w-100 slide1" ) %>
-        <div class="carousel-caption d-none d-md-block d-flex align-items-center">
-         <%= image_tag "Logowhite-01.png"  %>
-          <h5 class="p-2" style="">Build Tomorrow Today</h5>
-
+        <%= image_tag("slide1.png", class: "d-block w-100 slide1" ) %>
+        <div class="container-fluid caption-box">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="caption ">
+               <%= image_tag "Logowhite-01.png"  %>
+                <h5 class="p-2" style="">Build Tomorrow Today</h5>
+              </div>
+            </div>
+          </div>
         </div>
-
     </div>
 
-    <!--<div class="carousel-item">
+  
+    <div class="carousel-item">
+        <%= image_tag("slide2.png", class: "d-block w-100 slide1" ) %>
+        <div class="container-fluid caption-box">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="caption ">
+               <%= image_tag "Logowhite-01.png"  %>
+                <h5 class="p-2" style="">Build Tomorrow Today</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
 
-        <%= image_tag("slide2.jpg", class: "d-block w-100" ) %>
-        <div class="">
-
-        <h5>...</h5>
-        <p>...</p>
-      </div>
-
-    </div>-->
+  
+    <div class="carousel-item">
+        <%= image_tag("slide3.png", class: "d-block w-100 slide1" ) %>
+        <div class="container-fluid caption-box">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="caption ">
+               <%= image_tag "Logowhite-01.png"  %>
+                <h5 class="p-2" style="">Build Tomorrow Today</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
@@ -59,14 +84,10 @@
         name is <span>Townhouse IG.</span>
       </p>
       <button class="btn btn-info">More about Townhouse IG<i class="fas fa-chevron-right"></i></button>
-      <div class="dropdown mt-2">
-        <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">Proyects</button>
-        <ul class="dropdown-menu">
-          <% @projects.each do |project| %>
-            <li><%= link_to project.name, project_path(project) %></a></li>
-          <% end %>
-        </ul>
-      </div>
+      
+        <button class="btn btn-info " data-toggle="dropdown">Proyects</button>
+        
+      
     </div>
     <div class="col-xs-2 col-md-2 col-lg-2">
 
@@ -129,7 +150,7 @@
   </div>
 </div>
 
-<div class="container-fluid counts align-middle">
+<!--<div class="container-fluid counts align-middle">
   <div class="row paralax">
     <div class="col-md-4">
       <p class="count ">55</p>
@@ -141,4 +162,4 @@
       <p class="count">55</p>
     </div>
   </div>
-</div>
+</div>-->

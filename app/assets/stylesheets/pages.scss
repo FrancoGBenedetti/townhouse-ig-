@@ -1,6 +1,10 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
 body{
   background-color: #141414;
   margin: 20px;
@@ -199,9 +203,7 @@ main{
 .fi-sect{
   padding: 10px;
 }
-footer {
-  color: #adaeb3;
-}
+
 
 .underline {
   border-bottom: solid 1px #c8c8c8;
@@ -251,17 +253,23 @@ nav ul a, nav .brand-logo.center {
 
 
 .carousel-item{
-  height: 100vh !important;
+  
   .slide1{
     
   }
-  
-  .carousel-caption{
+  .caption-box{
+    position: absolute;
+    background-color: #000000ba;
+    top: 10%;
+  }
+  .caption{
     
     padding: 10px;
-    top: 8% !important;
-    bottom: auto !important;
     
+    
+    left: 0 !important;
+    right: 0 !important;
+    widht: 100%;
     text-align: center !important;
     
 
@@ -286,8 +294,31 @@ nav ul a, nav .brand-logo.center {
 
 
 footer{
-  background: linear-gradient(to bottom right, #f9f9f9, white);
+  background: linear-gradient(to bottom right, #f6f6f6, white);
   padding-top: 20px;
+  color: #adaeb3;
+  border-top: 1px solid #c8c8c8;
+  h4{
+    font-size: 1rem;
+
+  }
+  li{
+    font-size: 0.8rem;
+  }
+  .pad-3{
+    text-align: right;
+    img{
+      width: 5rem;
+    }
+  }
+
+  .footer-bottom{
+    border-top: 1px solid #c8c8c8;
+    padding-top: 15px;
+    p{
+      font-size: 0.8rem;
+    }
+  }
 }
 
 .home-projects{
