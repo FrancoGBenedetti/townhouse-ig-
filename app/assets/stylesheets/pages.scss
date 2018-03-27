@@ -210,9 +210,10 @@ main{
 }
 
 nav {
+  background-color: white !important;
   position: sticky;
   top: 0;
-  height: 70px;
+  height: 100px;
    -webkit-box-shadow: 0 8px 6px -6px rgba(35, 63, 26, 0.2);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
     -moz-box-shadow: 0 8px 6px -6px rgba(35, 63, 26, 0.2);  /* Firefox 3.5 - 3.6 */
     box-shadow: 0 8px 6px -6px rgba(35, 63, 26, 0.2);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
