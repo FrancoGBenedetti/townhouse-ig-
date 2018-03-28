@@ -13,7 +13,7 @@
         <%= @project.name %>
       </p>
       <figure class="figure text-center">
-          <%= image_tag 'acacioslogo.jpg', class: 'figure-img img-fluid', style: 'width: 10rem;' %>
+          <%= image_tag @project.logo, class: 'figure-img img-fluid', style: 'width: 10rem;' %>
       </figure>
       <!-- GALERIA DE PRODUCTOS -->
       <div class="sp-loading"><%= image_tag 'sp-loading.gif' %><br>Cargando imagenes</div>
@@ -43,9 +43,7 @@
 
 </div>
 
-<p id="notice"><%= notice %></p>
-<%= link_to 'Edit', edit_project_path(@project), class: 'btn btn-info mt-4' %>
-<%= link_to 'Back', admin_path, class:'btn btn-info mt-4' %>
+<%= render 'shared/footer' %>
 
 	<script type="text/javascript">
 
