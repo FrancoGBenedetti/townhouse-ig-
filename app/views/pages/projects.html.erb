@@ -85,6 +85,7 @@
   </div>-->
 
   <div class="row d-flex justify-content-center p-3 mt-5">
+<<<<<<< HEAD
 
     
     
@@ -154,8 +155,22 @@
         </div>
     </div>
 
+=======
+    <% @projects.each do |project| %>
+      <div class="card p-2 m-2" style="width: 18rem;">
+
+         <%= image_tag project.photos.first.image, class: 'card-img-top img-fluid imagen' %>
+          <div class="card-body">
+            <h5 class="card-title title-h"><%= project.name %></h5>
+            <figure class="figure">
+              <%= image_tag project.logo, class: 'figure-img img-fluid', style: 'width: 8rem;' %>
+            </figure>
+
+            <%= link_to 'See project', project_path(project), data: { turbolinks: false }, class: 'btn btn-info btn-sm' %>
+          </div>
+      </div>
+    <% end %>
+>>>>>>> bb23b44afaf9f3ecc63b788c2f39c6ff0e313864
   </div>
 
 </div>
-
-

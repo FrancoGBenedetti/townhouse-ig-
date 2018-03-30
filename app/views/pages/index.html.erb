@@ -10,7 +10,7 @@
 
   <div class="carousel-inner">
 
-    
+
     <div class="carousel-item active">
         <%= image_tag("slide1.png", class: "d-block w-100 slide1" ) %>
         <div class="container-fluid caption-box">
@@ -25,7 +25,7 @@
         </div>
     </div>
 
-  
+
     <div class="carousel-item">
         <%= image_tag("slide2.png", class: "d-block w-100 slide1" ) %>
         <div class="container-fluid caption-box">
@@ -40,7 +40,7 @@
         </div>
     </div>
 
-  
+
     <div class="carousel-item">
         <%= image_tag("slide3.png", class: "d-block w-100 slide1" ) %>
         <div class="container-fluid caption-box">
@@ -54,7 +54,7 @@
           </div>
         </div>
     </div>
-  
+
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
@@ -84,10 +84,10 @@
         name is <span>Townhouse IG.</span>
       </p>
       <button class="btn btn-info">More about Townhouse IG<i class="fas fa-chevron-right"></i></button>
-      
+
         <button class="btn btn-info " data-toggle="dropdown">Proyects</button>
-        
-      
+
+
     </div>
     <div class="col-xs-2 col-md-2 col-lg-2">
 
@@ -114,38 +114,19 @@
     </div>
 
 
-
-    <div class="col-md-5 gap" >
-      <a href="">
-        <figure class="home-projects">
-          <%= image_tag 'pintor.jpg', class: 'img-fluid' %>
-          <figcaption class="figure-caption text-right ">
-         Los acacios
-          <%= image_tag 'logoacacios.png', class: 'figure-img img-fluid', style: 'width: 10rem;' %>
-        </figcaption>
-        </figure>
-      </a>
-
-    </div>
-
-    <div class="col-md-5 gap" >
-      <a href="">
-        <figure class="home-projects">
-          <%= image_tag 'pintor.jpg', class: 'img-fluid' %>
-          <figcaption class="figure-caption text-right ">
-         Los acacios
-          <%= image_tag 'logoacacios.png', class: 'figure-img img-fluid', style: 'width: 10rem;' %>
-        </figcaption>
-        </figure>
-      </a>
-
-    </div>
-
-
-
-
-
-
+    <% @projects.each do |project| %>
+      <div class="col-md-5 gap" >
+        <a href="<%= project_path(project) %>" data-turbolinks="false">
+          <figure class="home-projects">
+            <%= image_tag project.photos.first.image, class: 'img-fluid' %>
+            <figcaption class="figure-caption text-right ">
+           <%= project.name %>
+            <%= image_tag project.logo, class: 'figure-img img-fluid', style: 'width: 10rem;' %>
+          </figcaption>
+          </figure>
+        </a>
+      </div>
+    <% end %>
 
   </div>
 </div>
