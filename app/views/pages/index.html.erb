@@ -116,7 +116,7 @@
 
     <% @projects.each do |project| %>
       <div class="col-md-5 gap" >
-        <a href="<%= project_path(project) %>">
+        <a href="<%= project_path(project) %>" data-turbolinks="false">
           <figure class="home-projects">
             <%= image_tag project.photos.first.image, class: 'img-fluid' %>
             <figcaption class="figure-caption text-right ">
