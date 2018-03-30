@@ -7,6 +7,8 @@ class PagesController < ApplicationController
   end
 
   def projects
-    @projects = Project.all
+
+  	@projects = Project.all
+
   end
 end
