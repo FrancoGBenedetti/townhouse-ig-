@@ -103,7 +103,7 @@
 
     </div>
 
-    <div class="col-md-2 gap parent-link " >
+    <!--<div class="col-md-2 gap parent-link " >
       <div class="p-2 link-to-projects d-flex align-items-stretch ">
         <a href="" class="d-flex  align-items-end">
           <h3 class="">Go to Projects</h3>
@@ -111,25 +111,38 @@
       </div>
 
 
-    </div>
-
-
-    <% @projects.each do |project| %>
-      <div class="col-md-5 gap" >
-        <a href="<%= project_path(project) %>" data-turbolinks="false">
-          <figure class="home-projects">
-            <%= image_tag project.photos.first.image, class: 'img-fluid' %>
-            <figcaption class="figure-caption text-right ">
-           <%= project.name %>
-            <%= image_tag project.logo, class: 'figure-img img-fluid', style: 'width: 10rem;' %>
-          </figcaption>
-          </figure>
-        </a>
-      </div>
-    <% end %>
+    </div>-->
 
   </div>
+
+  <div class="row d-flex justify-content-center p-3 mt-5">
+
+    <% @projects.each do |project| %>
+      <div class="card p-2 m-1" style="width: 18rem;">
+          <div class="card-img-box" style="background-image:url('<%= project.photos.first.image %>')">
+            
+          </div>
+         <!--<%= image_tag project.photos.first.image, class: 'card-img-top img-fluid imagen' %>-->
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title title-h"><%= project.name %></h5>
+            <div class="card-logo-box" style="background-image:url('<%= project.logo %>')" >
+              <!--<%= image_tag project.logo, class: 'figure-img img-fluid', style: 'width: 8rem;' %>-->
+            </div>
+            
+          
+            <%= link_to 'See project', project_path(project), data: { turbolinks: false }, class: 'btn btn-info btn-sm mt-auto' %>
+          
+            
+          </div>
+      </div>
+    <% end %>
+  </div>
+
+
 </div>
+
+
+
 
 <!--<div class="container-fluid counts align-middle">
   <div class="row paralax">
