@@ -1,11 +1,11 @@
 	<div class="widget">
         <h5 class="widget-title">PROJECTS</h5>
-        <ul class="widget-projects"> 
-          <% @projects.each do |project| %>
+        <ul class="widget-projects">
+          <% @widget.each do |project| %>
           <li>
             <%= link_to project.name, project_path(project), data: { turbolinks: false }, class: '' %>
           </li>
-            
+
           <% end %>
         </ul>
     </div>

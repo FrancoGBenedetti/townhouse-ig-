@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  before_action :set_widget
   def index
   	@projects = Project.last(2)
   end
@@ -9,4 +10,9 @@ class PagesController < ApplicationController
   def projects
   	@projects = Project.all
   end
+
+  private
+    def set_widget
+      @widget = Project.all
+    end
 end
