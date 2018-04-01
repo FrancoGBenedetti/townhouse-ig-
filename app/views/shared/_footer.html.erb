@@ -30,13 +30,15 @@
             <li><a href="#">contacto@townhouseig.cl</a></li>
             <li><a href="#">Fax: (818)610-8025 </a></li>
             <li><a href="#">Phone: (818) 610-1580 </a></li>
-           
+
           </ul>
         </div>
       </div>
 
       <div class="col-md-3 col-sm-6">
+        <% if params[:controller] == 'pages' %>
         <%= render 'shared/widgetprojects' %>
+        <% end %>
       </div>
 
       <div class="col-md-3 col-sm-6">
@@ -47,7 +49,7 @@
                 </a>
         </div>
       </div>
-      
+
     </div>
   </div>
   </div>
