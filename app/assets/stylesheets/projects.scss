@@ -8,11 +8,13 @@ html, body {
 	
 }
 
+ $text-color-1: #47a4b6;
+
 /*show css*/
 
 .show-body{
 	background-color: white;
-	padding: 5%;
+	padding: 2%;
 	.content{
 		text-align: justify;
 	}
@@ -20,6 +22,10 @@ html, body {
 
 .title-show{
 
+}
+
+.show-body{
+	
 }
 
 /* CSS for the loading div */
