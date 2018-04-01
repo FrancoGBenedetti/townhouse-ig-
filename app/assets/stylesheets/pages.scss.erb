@@ -15,8 +15,14 @@ body{
  $font-content: 'Abel', sans-serif;
  $color-nav: #565656;
 
- 
+ $theme-color-a: #5da5b4;
 
+ $text-color-1: #47a4b6;
+
+ 
+ .btn{
+  border-radius: 0px !important;
+ }
  .skin{
   background-color: white;
   
@@ -25,6 +31,12 @@ body{
 
  .elegant{
   box-shadow: 0px 0px 4px rgba(68,68,68,0.6) !important;
+ }
+ .quote{
+  font-size: 4rem;
+  color: #e8e8e8;
+  font-weight: bolder;
+  font-family: $font-content;
  }
 
 nav{
@@ -153,10 +165,11 @@ main{
   padding-top: 50px;
   border-bottom: 1px solid #c8c8c8;
   padding-bottom: 50px;
-  background: linear-gradient(to bottom, #669999 0%, #006666 99%);
-  color: white;
+  background-color: #ecfbfb;
+
+  color: #565656;
   h1{
-    color: white !important;
+    color: #47a4b6 !important;
   }
 
 }
@@ -407,14 +420,14 @@ footer{
 }
 
 ///project mixin////
-@mixin bkg-img-mixin($w-size, $h-size){
+@mixin bkg-img-mixin($w-size, $h-size, $b-size){
     position: relative;
     
     width:  $w-size;
     height: $h-size;
     background-position: 50% 50%;
     background-repeat:   no-repeat;
-    background-size:     cover;
+    background-size:     $b-size;
     padding: 1%;
     margin: 0 auto;
 }
@@ -423,6 +436,15 @@ footer{
 
 ////project mixin end///
 ///////projects//////////
+
+.home-projects{
+  h3{
+    border: 1px solid $text-color-1;
+    display: inline-block;
+    padding: 2%;
+    color: $text-color-1;
+  }
+}
 .card:hover{
   box-shadow: 1px 1px 2px #c8c8c8;
 }
@@ -430,27 +452,25 @@ footer{
   border-radius: 0 !important;
   text-align: center;
   transition: all 0.8s;
+  background-color: #fff0 !important;
+  border: 1px solid $theme-color-a !important;
+  border-bottom: 5px solid $theme-color-a;
+
   .card-img-box{
-    @include bkg-img-mixin(100%, 10rem);
-    padding: 1%;
+    @include bkg-img-mixin(100%, 10rem, cover);
+   
     border: 1px solid #f7f7f7;
-    box-shadow: 1px 1px 2px #e8e8e8;
+    box-shadow: 0px 0px 2px #e8e8e8;
   }
+
   h5{
     height: 3em;
     font-size: 2em;
   }
+
   .card-logo-box{
     
-    position: relative;
-    
-    width:  9rem;
-    height: 9rem;
-    background-position: 50% 50%;
-    background-repeat:   no-repeat;
-    background-size:     100%;
-    padding: 1%;
-    margin: 0 auto;
+    @include bkg-img-mixin(6rem, 6rem, 100%);
    
   }
   .btn{
@@ -460,3 +480,7 @@ footer{
 }
 
 ////Projects end
+
+
+///experiment ////
+
