@@ -19,13 +19,13 @@ body{
 
  $text-color-1: #47a4b6;
 
- 
+
  .btn{
   border-radius: 0px !important;
  }
  .skin{
   background-color: white;
-  
+
   box-shadow: inset 0px 0px 5px #d4d4d4;
  }
 
@@ -41,7 +41,7 @@ body{
 
 nav{
   box-shadow: 0px 0px 4px rgba(68,68,68,0.6) !important;
-    border-bottom: 1px solid #c8c8c8 !important; 
+    border-bottom: 1px solid #c8c8c8 !important;
  }
 
 
@@ -63,10 +63,10 @@ nav{
   .widget-projects{
     list-style: none !important;
     padding-left: 0px !important;
-    
+
     li{
       border-bottom: 1px solid $text-color-1;
-      
+
       margin-top: 1em;
       a{
       text-decoration: none !important;
@@ -102,11 +102,11 @@ nav{
 
 }
 .show-content{
-  
+
   border: 1px solid #d8d8d8;
 
   padding: 2%;
-  
+
 }
 
 .content{
@@ -118,19 +118,19 @@ nav{
 }
 .title{
   font-family: $font-title;
-  
+
   display: inline-block;
   color: #474747
 }
 
 .title-h{
   font-family: $font-title;
- 
+
   padding-left: 5px;
-  
+
   color: #474747;
   font-size: 2.5rem;
-  
+
 }
 
 
@@ -142,8 +142,8 @@ nav{
   font-family: $font-title;
   color: #47a4b6;
   font-size: 2rem;
-  
-  
+
+
 
 }
 
@@ -158,9 +158,9 @@ nav{
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
   a{
-    
+
   }
-  
+
 }
 
 .link-to-projects{
@@ -177,7 +177,7 @@ nav{
   background: linear-gradient(to bottom, #669999 0%, #006666 99%);
   //background-blend-mode: overlay;
 
-  
+
 
   a{
     color: white;
@@ -186,9 +186,9 @@ nav{
     padding: 3%;
     transition: all .8s;
     border: 1px solid white;
-    
+
   }
-  
+
 }
 
 main{
@@ -298,9 +298,9 @@ nav ul a, nav .brand-logo.center {
 
 
 .carousel-item{
-  
+
   .slide1{
-    
+
   }
   .caption-box{
     position: absolute;
@@ -308,26 +308,26 @@ nav ul a, nav .brand-logo.center {
     top: 10%;
   }
   .caption{
-    
+
     padding: 10px;
-    
-    
+
+
     left: 0 !important;
     right: 0 !important;
     widht: 100%;
     text-align: center !important;
-    
+
 
 
     img{
       width: 18rem;
       display: inline-block;
     }
-    
-    
+
+
     -webkit-filter: opacity(0.9);
     h5{
-      color: white; 
+      color: white;
       font-size: 3rem;
       font-family: $font-title;
       display: inline-block;
@@ -398,16 +398,16 @@ footer{
 
 .link{
   padding:  10px;
-  
+
   text-align: center;
 }
 
 */
 .bkg-about{
-  background-image: url("/assets/bkg-count.jpg");
+  background-image: url(<%= asset_data_uri 'bkg-count.jpg' %>);
     background-repeat: no-repeat;
     background-size: cover;
-    
+
     background-position: bottom;
     background-attachment: fixed;
     overflow: hidden;
@@ -415,13 +415,13 @@ footer{
         overflow: hidden;
         background-color: rgba(76,76,76,0.37);
         padding: 20px;
-        
-       
-        
+
+
+
       }
 
     h3{
-      
+
       color: white;
       font-family: $font-title;
       font-size: 50px;
@@ -453,7 +453,7 @@ footer{
 ///project mixin////
 @mixin bkg-img-mixin($w-size, $h-size, $b-size){
     position: relative;
-    
+
     width:  $w-size;
     height: $h-size;
     background-position: 50% 50%;
@@ -489,7 +489,7 @@ footer{
 
   .card-img-box{
     @include bkg-img-mixin(100%, 10rem, cover);
-   
+
     border: 1px solid #f7f7f7;
     box-shadow: 0px 0px 2px #e8e8e8;
   }
@@ -500,9 +500,9 @@ footer{
   }
 
   .card-logo-box{
-    
+
     @include bkg-img-mixin(6rem, 6rem, 100%);
-   
+
   }
   .btn{
     border-radius: 0 !important;
@@ -514,4 +514,3 @@ footer{
 
 
 ///experiment ////
-
