@@ -2,6 +2,7 @@ class ProjectsController < ApplicationController
   layout 'adminlayout'
   before_action :set_project, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: :show
+  before_action :set_widget
   # GET /projects
   # GET /projects.json
   def index
@@ -64,6 +65,11 @@ class ProjectsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_project
       @project = Project.find(params[:id])
+    end
+
+
+    def set_widget
+      @widget = Project.all
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
