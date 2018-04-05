@@ -11,6 +11,33 @@ body{
   box-shadow: 0px 0px 1px #474747;
  }
 
+ ///project mixin////
+@mixin bkg-img-mixin($w-size, $h-size, $b-size){
+    position: relative;
+
+    width:  $w-size;
+    height: $h-size;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     $b-size;
+    padding: 1%;
+    margin: 0 auto;
+}
+
+@mixin bkg-img{
+
+
+    background-attachment: fixed;
+    background-position: left top;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+    
+}
+
+
+
+////project mixin end///
+
  $font-title:'Oswald', sans-serif;
  $font-content: 'Abel', sans-serif;
  $color-nav: #565656;
@@ -163,6 +190,10 @@ nav{
 
 }
 
+.projects-box-home{
+  @include bkg-img;
+}
+
 .link-to-projects{
   //background-color: #07293a;
   height: 100%;
@@ -304,18 +335,18 @@ nav ul a, nav .brand-logo.center {
   }
   .caption-box{
     position: absolute;
-    background-color: #000000ba;
+    //background-color: #000000ba;
     top: 10%;
   }
   .caption{
 
-    padding: 10px;
+    padding: 5px;
 
-
-    left: 0 !important;
+    background-color: #000000ba;
+    
     right: 0 !important;
     widht: 100%;
-    text-align: center !important;
+    text-align: right !important;
 
 
 
@@ -450,22 +481,7 @@ footer{
   transform: scale(1.05);
 }
 
-///project mixin////
-@mixin bkg-img-mixin($w-size, $h-size, $b-size){
-    position: relative;
 
-    width:  $w-size;
-    height: $h-size;
-    background-position: 50% 50%;
-    background-repeat:   no-repeat;
-    background-size:     $b-size;
-    padding: 1%;
-    margin: 0 auto;
-}
-
-
-
-////project mixin end///
 ///////projects//////////
 
 .home-projects{

@@ -1,5 +1,4 @@
 
-<%= render 'shared/navbar' %>
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -15,7 +14,7 @@
         <%= image_tag("slide1.png", class: "d-block w-100 slide1" ) %>
         <div class="container-fluid caption-box">
           <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-3 p-0">
               <div class="caption ">
                <%= image_tag "Logowhite-01.png"  %>
                 <h5 class="p-2" style="">Build Tomorrow Today</h5>
@@ -26,49 +25,24 @@
     </div>
 
 
-    <div class="carousel-item">
-        <%= image_tag("slide2.png", class: "d-block w-100 slide1" ) %>
-        <div class="container-fluid caption-box">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="caption ">
-               <%= image_tag "Logowhite-01.png"  %>
-                <h5 class="p-2" style="">Build Tomorrow Today</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
 
-
-    <div class="carousel-item">
-        <%= image_tag("slide3.png", class: "d-block w-100 slide1" ) %>
-        <div class="container-fluid caption-box">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="caption ">
-               <%= image_tag "Logowhite-01.png"  %>
-                <h5 class="p-2" style="">Build Tomorrow Today</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
-
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+   <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
     <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
-    </a>
+    </a>-->
   </div>
 </div>
 
 
+<%= render 'shared/navbar' %>
 
-<main class="container-fluid drop-shadow p-5">
+
+
+<main class="container-fluid drop-shadow p-5 " >
   <div class="row">
     <div class="col-xs-2 col-md-2 col-lg-2">
 
@@ -95,7 +69,7 @@
   </div>
 </main>
 
-<div class="container-fluid pd-100 metal-bkg home-projects">
+<div class="container-fluid pd-100 metal-bkg home-projects projects-box-home" style="background-image:url('/assets/bkgiso.png')">
   <div class="row ">
     <div class="col-md-12 text-center">
 
@@ -106,41 +80,69 @@
     
 
   </div>
-
-  <div class="row d-flex justify-content-center p-3 mt-5 ">
+  
+    <div class="row d-flex justify-content-center p-3 mt-5 " >
    
 
-    <% @projects.each do |project| %>
-      <div class="card p-2 m-1" style="width: 18rem;">
-          <div class="card-img-box" style="background-image:url('<%= project.photos.first.image %>')">
-            
-          </div>
-         <!--<%= image_tag project.photos.first.image, class: 'card-img-top img-fluid imagen' %>-->
-          <div class="card-body d-flex flex-column">
-            
-            <div class="card-logo-box" style="background-image:url('<%= project.logo %>')" >
-              <!--<%= image_tag project.logo, class: 'figure-img img-fluid', style: 'width: 8rem;' %>-->
+      <% @projects.each do |project| %>
+        <div class="card p-2 m-1" style="width: 18rem;">
+            <div class="card-img-box" style="background-image:url('<%= project.photos.first.image %>')">
+              
             </div>
-            <h5 class="card-title title-h "><%= project.name %></h5>
+           <!--<%= image_tag project.photos.first.image, class: 'card-img-top img-fluid imagen' %>-->
+            <div class="card-body d-flex flex-column">
+              
+              <div class="card-logo-box" style="background-image:url('<%= project.logo %>')" >
+                <!--<%= image_tag project.logo, class: 'figure-img img-fluid', style: 'width: 8rem;' %>-->
+              </div>
+              <h5 class="card-title title-h "><%= project.name %></h5>
+              
             
-          
-            <%= link_to 'See project', project_path(project), data: { turbolinks: false }, class: 'btn btn-info btn-sm mt-auto' %>
-          
+              <%= link_to 'See project', project_path(project), data: { turbolinks: false }, class: 'btn btn-info btn-sm mt-auto' %>
             
-          </div>
-      </div>
-    <% end %>
-    
-  </div>
-
-  <div class="row">
-    
-    <div class="offset-md-4 col-md-4">
-      <%= link_to 'ALL PROJECTS', pages_projects_path, class: 'title btn btn-outline-info mt-auto d-block' %>
+              
+            </div>
+        </div>
+      <% end %>
+      
     </div>
+
+    <div class="row">
+      
+      <div class="offset-md-4 col-md-4">
+        <%= link_to 'ALL PROJECTS', pages_projects_path, class: 'title btn btn-outline-info mt-auto d-block' %>
+      </div>
+    </div>
+  
+
+  
+
+
+</div>
+
+<div class="container-fuid pt-5 pb-5">
+  <div class="row">
+
+    
+
+    <div class="offset-md-3 col-md-6 text-center">
+
+      <h3 class="title-h">
+        LET’S TALK NUMBERS:
+      </h3>
+      <p class="content p-2">
+        There is a principle in finance called the rule of 72. It’s a measure of how quickly your money
+        doubles at a certain rate of return. <br>With us, that averages out to just six years. Here are some important
+        things you should know if you’re ready to invest with us:
+      </p>
+      <ul>
+        <li>Our minimum investment amount is 50,000 USD.</li>
+        <li>Average returns range between 11 and 14 percent</li>
+        <li>Fees total x per one round of investment</li>
+      </ul>
+    </div>
+
   </div>
-
-
 </div>
 
 
