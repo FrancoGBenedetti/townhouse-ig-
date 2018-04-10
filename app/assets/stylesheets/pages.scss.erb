@@ -335,20 +335,25 @@ nav ul a, nav .brand-logo.center {
 
 
 .carousel-item{
-
+  height: 100vh;
   .slide1{
-
+    height: 100vh;
+    
   }
   .caption-box{
     position: absolute;
     //background-color: #000000ba;
-    top: 10%;
+    top: 0;
+    height: 100%;
+    .row{
+      height: 100% !important;
+    }
   }
   .caption{
 
     padding: 5px;
 
-    background-color: #000000ba;
+    //background-color: #000000ba;
     
     right: 0 !important;
     widht: 100%;
@@ -357,7 +362,7 @@ nav ul a, nav .brand-logo.center {
 
 
     img{
-      width: 18rem;
+      width: 19rem;
       display: inline-block;
     }
 
@@ -365,7 +370,7 @@ nav ul a, nav .brand-logo.center {
     -webkit-filter: opacity(0.9);
     h5{
       color: white;
-      font-size: 3rem;
+      font-size: 2.3rem;
       font-family: $font-title;
       display: inline-block;
       border-left: 1px solid #c8c8c8;
