@@ -21,13 +21,13 @@
                   <p>
                     Townhouse IG wants to help you secure a better future for you and your family.
                   </p>
-                 
+
                 </div>
                 <div>
                   <h5 class="p-2" style="">Build Tomorrow Today</h5>
                 </div>
-               
-                
+
+
               </div>
             </div>
           </div>
@@ -87,45 +87,45 @@
 
     </div>
 
-    
+
 
   </div>
-  
+
     <div class="row d-flex justify-content-center p-3 mt-5 " >
-   
+
 
       <% @projects.each do |project| %>
         <div class="card p-2 m-1" style="width: 18rem;">
             <div class="card-img-box" style="background-image:url('<%= project.photos.first.image %>')">
-              
+
             </div>
            <!--<%= image_tag project.photos.first.image, class: 'card-img-top img-fluid imagen' %>-->
             <div class="card-body d-flex flex-column">
-              
+
               <div class="card-logo-box" style="background-image:url('<%= project.logo %>')" >
                 <!--<%= image_tag project.logo, class: 'figure-img img-fluid', style: 'width: 8rem;' %>-->
               </div>
               <h5 class="card-title title-h "><%= project.name %></h5>
-              
-            
+
+
               <%= link_to 'See project', project_path(project), data: { turbolinks: false }, class: 'btn btn-info btn-sm mt-auto' %>
-            
-              
+
+
             </div>
         </div>
       <% end %>
-      
+
     </div>
 
     <div class="row">
-      
+
       <div class="offset-md-4 col-md-4">
         <%= link_to 'ALL PROJECTS', pages_projects_path, class: 'title btn btn-outline-info mt-auto d-block' %>
       </div>
     </div>
-  
 
-  
+
+
 
 
 </div>
@@ -133,9 +133,9 @@
 <div class="container-fuid pt-5 pb-5">
   <div class="row">
 
-    
 
-    <div class="offset-md-3 col-md-6 text-center">
+
+    <div class="offset-md-3 col-md-6 text-center section3">
 
       <h3 class="title-h">
         LET’S TALK NUMBERS:
@@ -161,14 +161,14 @@
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.0876785991436!2d-118.39388834953566!3d34.06726658050664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b955e6223681%3A0xf6a6e158e0498a6c!2s9171+Wilshire+Blvd+%23500%2C+Beverly+Hills%2C+CA+90210%2C+EE.+UU.!5e0!3m2!1ses-419!2scl!4v1522956225227" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
     <div class="col-md-3 p-2">
-      
+
               <div class="card p-2 m-1" style="width: 18rem;">
                   <div class="card-img-box" style="background-image:url('<%= asset_path 'blvd.jpg' %>')">
-                    
+
                   </div>
-                
+
                   <div class="card-body d-flex flex-column">
-                    
+
                     <h5 class="card-title title-h ">Address:</h5>
                     <p>9171 Wilshire Blvd Suite 500 <br>
                     Beverly Hills,CA 90210.<br></p>
@@ -176,7 +176,7 @@
                   </div>
               </div>
     </div>
-    
+
   </div>
 </div>
 
