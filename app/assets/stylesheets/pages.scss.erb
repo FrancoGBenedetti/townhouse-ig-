@@ -140,6 +140,7 @@ nav{
 
 .content{
   font-family: $font-content;
+  padding: 1%;
   span{
     font-weight: bolder !important;
     font-size: 1em;
@@ -278,7 +279,7 @@ main{
 .section-3 {
   background-color: #474747;
   color: white;
-  
+
   h3{
     color: white;
   }
@@ -507,13 +508,13 @@ footer{
 
     background-repeat: no-repeat;
     background-size: cover;
-
+    background-image: url(<%= asset_data_uri 'slide1.png' %>);
     background-position: bottom;
     background-attachment: fixed;
     overflow: hidden;
     .tint {
         overflow: hidden;
-        background-color: rgba(76,76,76,0.37);
+        background-color: $text-color-1;
         padding: 20px;
 
 
@@ -527,6 +528,10 @@ footer{
       font-size: 50px;
     }
 
+}
+.about-info-box{
+  background-color: $text-color-1;
+  color: white;
 }
 .alice{
   padding: 50px;
