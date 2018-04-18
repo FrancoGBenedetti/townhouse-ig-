@@ -5,41 +5,9 @@
 // Extra small devices (portrait phones, less than 576px)
 // No media query since this is the default in Bootstrap
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-
-  body {
-    margin: 0px;
-  }
-
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-
-  body{
-    background-color: #141414;
-    margin: 20px;
-    box-shadow: 0px 0px 1px #474747;
-   }
-
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {  }
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {  }
 
 
-.section3 {
-  ul {
-    padding: 0 !important;
-    li {
-      style: none !important;
-    }
-  }
-}
+
 
  .bg-light{
   background-color: white !important;
@@ -274,6 +242,56 @@ main{
 
 }
 
+///FRONT IMAGE HOME///
+.img-container{
+  @include bkg-img-mixin(100%, 100%, cover);
+  background-position: bottom !important;
+  background-image: url(<%= asset_data_uri 'slide1.png' %>);
+  height: 100vh;
+  .row{
+    height: 100%;
+    .caption{
+      margin: 3%;
+      
+      .caption-img-logo{
+        width: 15rem;
+      }
+      h5{
+        color: white;
+        font-size: 2rem;
+        font-family: $font-title;
+      }
+      p{
+        color: white;
+        font-family: $font-content;
+        font-size: 2rem;
+      }
+    }
+  }
+  
+}
+
+///FRONT IMAGE HOME///
+
+////SECTION3///////////
+
+.section-3 {
+  background-color: #474747;
+  color: white;
+  box-shadow: 0px -1px 4px #565656d1;
+  h3{
+    color: white;
+  }
+  ul {
+    padding: 0 !important;
+    list-style: none !important;
+    li {
+      
+    }
+  }
+}
+
+////SECTION3END///////////
 
 
 .counts{
@@ -582,3 +600,35 @@ footer{
 
 
 ///experiment ////
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+  body {
+    margin: 0px;
+  }
+  
+
+}
+@media (max-width: 576px){
+  .img-container{
+    display: none !important;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+  body{
+    background-color: #141414;
+    margin: 1rem;
+    box-shadow: 0px 0px 1px #474747;
+   }
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {  }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {  }
