@@ -2,14 +2,39 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+  body {
+    margin: 0px;
+  }
+
+}
 
 
 
-body{
-  background-color: #141414;
-  margin: 20px;
-  box-shadow: 0px 0px 1px #474747;
- }
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+  body{
+    background-color: #141414;
+    margin: 20px;
+    box-shadow: 0px 0px 1px #474747;
+   }
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {  }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {  }
+
+
+
 
  .bg-light{
   background-color: white !important;
@@ -35,7 +60,7 @@ body{
     background-position: left top;
     background-repeat:   no-repeat;
     background-size:     cover;
-    
+
 }
 
 
@@ -248,7 +273,7 @@ main{
 
 .counts{
   text-align: center;
-    background-image: url("/assets/bkg-count.jpg");
+
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 100px;
@@ -338,7 +363,7 @@ nav ul a, nav .brand-logo.center {
   height: 100vh;
   .slide1{
     height: 100vh;
-    
+
   }
   .caption-box{
     position: absolute;
@@ -354,7 +379,7 @@ nav ul a, nav .brand-logo.center {
     padding: 5px;
 
     //background-color: #000000ba;
-    
+
     right: 0 !important;
     widht: 100%;
     text-align: right !important;
@@ -456,7 +481,7 @@ footer{
 
 */
 .bkg-about{
-  background-image: url(<%= asset_data_uri 'bkg-count.jpg' %>);
+
     background-repeat: no-repeat;
     background-size: cover;
 
