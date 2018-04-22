@@ -43,7 +43,7 @@
  $font-title:'Oswald', sans-serif;
  $font-content: 'Abel', sans-serif;
  $color-nav: #565656;
-
+ $accent-color: #105765;
  $theme-color-a: #5da5b4;
 
  $text-color-1: #47a4b6;
@@ -61,11 +61,19 @@
  .elegant{
   box-shadow: 0px 0px 4px rgba(68,68,68,0.6) !important;
  }
- .quote{
-  font-size: 4rem;
-  color: #e8e8e8;
-  font-weight: bolder;
+ .subtitle{
+  color: #c8c8c8;
+  font-size: 2rem;
+  font-weight: lighter;
   font-family: $font-content;
+ }
+ .slogan{
+  font-size: 4rem;
+  color: $accent-color;
+  padding: 1%;
+  font-weight: bolder;
+  font-family: $font-title;
+
  }
 
 nav{
@@ -230,15 +238,35 @@ nav{
 }
 
 main{
-  text-align: center;
+  text-align: left;
   padding-top: 50px;
   border-bottom: 1px solid #c8c8c8;
   padding-bottom: 50px;
-  background-color: #ecfbfb;
+  background-color: $accent-color;
+  padding: 0 !important;
+  overflow: hidden;
+  
+  color: white;
+  .col-box-1{
+     position: relative;
 
-  color: #565656;
+    width:  100%;
+    
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+    padding: 1%;
+    
+    
+    background-image: url(<%= asset_data_uri 'slide4.png' %>);
+  }
   h1{
-    color: #47a4b6 !important;
+    color: white !important;
+  }
+  button{
+    background-color: #c8c8c8;
+    border-color: white !important;
+    color: white !important;
   }
 
 }
@@ -252,21 +280,14 @@ main{
   .row{
     height: 100%;
     .caption{
-      margin: 3%;
-      
-      .caption-img-logo{
-        width: 15rem;
-      }
+
       h5{
         color: white;
-        font-size: 2rem;
+        font-size: 2.8rem;
         font-family: $font-title;
+        background-color: #00000066;
       }
-      p{
-        color: white;
-        font-family: $font-content;
-        font-size: 2rem;
-      }
+
     }
   }
   
@@ -433,9 +454,25 @@ nav ul a, nav .brand-logo.center {
 }
 
 .direct-row{
-  background-color: #effbfb;
-  .direct-photo{
-    @include bkg-img;
+  background-color: $accent-color;
+  color:white;
+
+    svg{
+      font-size: 3rem;
+    }
+
+  h2{
+    color: white;
+  }
+  .direct-img{
+    position: relative;
+    width:  100%;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+    padding: 1%;
+    background-image: url(<%= asset_data_uri 'blvd.jpg' %>);
+    
   }
 }
 
@@ -514,7 +551,7 @@ footer{
     overflow: hidden;
     .tint {
         overflow: hidden;
-        background-color: $text-color-1;
+        background-color: #00000066;
         padding: 20px;
 
 
@@ -530,8 +567,11 @@ footer{
 
 }
 .about-info-box{
-  background-color: $text-color-1;
-  color: white;
+  background-color: white;
+  color: #474747;
+  .btn{
+    background-color: $accent-color;
+  }
 }
 .alice{
   padding: 50px;
@@ -560,12 +600,18 @@ footer{
 
 .home-projects{
    background-image: url(<%= asset_data_uri 'bkgiso.png' %>);
-  h3{
-    border: 1px solid $text-color-1;
-    display: inline-block;
-    padding: 2%;
-    color: $text-color-1;
-  }
+   .card{
+    .btn{
+      background-color: $accent-color !important;
+     }
+    
+   }
+   .all-p-btn{
+    border-color: $accent-color !important;
+   }
+   .all-p-btn:hover{
+    background-color: $accent-color !important;
+   }
 }
 .card:hover{
   box-shadow: 1px 1px 2px #c8c8c8;
@@ -622,13 +668,31 @@ footer{
 }
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
+@media (max-width: 768px){
+
+  .img-container{
+    .row{
+      div{
+        
+        .caption{
+
+        }
+      }
+    }
+   }
+
+
+}
+@media (min-width: 769px) {
 
   body{
     background-color: #141414;
     margin: 1rem;
     box-shadow: 0px 0px 1px #474747;
    }
+
+
+   
 
 }
 
