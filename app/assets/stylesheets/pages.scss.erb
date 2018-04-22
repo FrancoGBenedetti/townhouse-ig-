@@ -245,19 +245,19 @@ main{
   background-color: $accent-color;
   padding: 0 !important;
   overflow: hidden;
-  
+
   color: white;
   .col-box-1{
      position: relative;
 
     width:  100%;
-    
+
     background-position: 50% 50%;
     background-repeat:   no-repeat;
     background-size:     cover;
     padding: 1%;
-    
-    
+
+
     background-image: url(<%= asset_data_uri 'slide4.png' %>);
   }
   h1{
@@ -292,7 +292,7 @@ main{
 
     }
   }
-  
+
 }
 
 ///FRONT IMAGE HOME///
@@ -310,7 +310,7 @@ main{
     padding: 0 !important;
     list-style: none !important;
     li {
-      
+
     }
   }
 }
@@ -474,7 +474,7 @@ nav ul a, nav .brand-logo.center {
     background-size:     cover;
     padding: 1%;
     background-image: url(<%= asset_data_uri 'blvd.jpg' %>);
-    
+
   }
 }
 
@@ -606,7 +606,7 @@ footer{
     .btn{
       background-color: $accent-color !important;
      }
-    
+
    }
    .all-p-btn{
     border-color: $accent-color !important;
@@ -650,8 +650,60 @@ footer{
 }
 
 ////Projects end
+// NUMBERS css
+.bkg-numbers{
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(<%= asset_data_uri 'slideedit2.png' %>);
+    background-position: bottom;
+    background-attachment: fixed;
+    overflow: hidden;
+    .tint {
+        overflow: hidden;
+        background-color: #00000066;
+        padding: 20px;
 
 
+
+      }
+
+    h3{
+
+      color: white;
+      font-family: $font-title;
+      font-size: 50px;
+    }
+
+}
+.numbers-info-box{
+  background-color: white;
+  color: #474747;
+  .btn{
+    background-color: $accent-color;
+  }
+}
+.alice{
+  padding: 50px;
+  text-align: center;
+}
+
+.alice > img{
+  border: 1px solid #c8c8c8;
+}
+
+.boxed{
+  padding: 10px;
+  background-color: #f6f6f6;
+  border: 1px solid #d8d8d8;
+  color: #474747;
+}
+.boxed-style{
+ transition: all 0.9s;
+}
+.boxed-style:hover{
+  transform: scale(1.05);
+}
 ///experiment ////
 
 // Small devices (landscape phones, 576px and up)
@@ -660,7 +712,7 @@ footer{
   body {
     margin: 0px;
   }
-  
+
 
 }
 @media (max-width: 576px){
@@ -675,7 +727,7 @@ footer{
   .img-container{
     .row{
       div{
-        
+
         .caption{
 
         }
@@ -685,6 +737,8 @@ footer{
 
 
 }
+
+
 @media (min-width: 769px) {
 
   body{
@@ -694,7 +748,7 @@ footer{
    }
 
 
-   
+
 
 }
 
