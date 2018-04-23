@@ -1,12 +1,9 @@
 <%= render 'shared/navbar' %>
 	<div class="container-fluid bkg-numbers alice d-flex justify-content-center ">
 		<div class="row tint boxed-style p-5">
-			<div class="col-md-12  ">
+			<div class="col-md-12  p-5">
 
-				<figure class="figure">
-		          <%= image_tag 'Logowhite-01.png', class: 'figure-img img-fluid w-50' %>
-				</figure>
-				<h3>Build Tomorrow Today </h3>
+				<h3>Lets Talk Numbers</h3>
 
 			</div>
 		</div>
@@ -16,7 +13,7 @@
 
 
 
-			<div class="col-md-12">
+			<div class="offset-md-3 col-md-6">
 				<div class="">
 
 					<p class="content">
@@ -29,13 +26,18 @@
 					</p>
 
 				</div>
+				<%= link_to pages_projects_path do  %>
+		          <button class="btn btn-outline-info m-1" >Projects</button>
+		        <% end %>
+				
+
+					<button class="btn btn-info m-1">Contact Us<i class="fas fa-chevron-right"></i></button>
 			</div>
+			
 
 			<div class="col-md-12 text-right mr-top">
 
-					<button class="btn btn-info m-1">Projects<i class="fas fa-chevron-right"></i></button>
-
-					<button class="btn btn-info m-1">Contact Us<i class="fas fa-chevron-right"></i></button>
+					
 			</div>
 		</div>
 	</div>
