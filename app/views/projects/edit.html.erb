@@ -12,10 +12,28 @@
   <%= image_tag @project.logo %>
 <% end %>
 
-<%= form_with(model: [@project, Photo.new], local: true) do |f| %>
-  <%= f.file_field :image %>
-  <%= f.submit :'add image' %>
-<% end %>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <%= link_to 'Sold Out/ Not Sold Out', make_sold_out_project_path(@project), method: :post,class: 'btn btn-success' %>
+    <% if @project.sold_out %>
+      <h4>the project is sold out</h4> <br>
+    <% else %>
+      <h4>the project is not sold out</h4> <br>
+    <% end %>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <%= form_with(model: [@project, Photo.new], local: true) do |f| %>
+        <%= f.file_field :image %>
+        <%= f.submit :'add image' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
 
 
 <div class="container">
@@ -34,5 +52,3 @@
 <%= link_to 'Back', admin_path %>
   </div>
 </div>
-
-
