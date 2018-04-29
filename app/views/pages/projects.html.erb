@@ -15,6 +15,12 @@
           <div class="card-img-box" style="background-image:url('<%= project.photos.first.image %>')">
             
           </div>
+          <% if project.sold_out %>
+            <div class="sold">
+              Vendido
+            </div>
+      
+          <% end %>
          <!--<%= image_tag project.photos.first.image, class: 'card-img-top img-fluid imagen' %>-->
           <div class="card-body d-flex flex-column">
             
