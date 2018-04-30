@@ -22,7 +22,7 @@ class PhotosController < ApplicationController
 
 
     if @photo.save
-      redirect_to @project, notice: 'Photo was successfully'
+      redirect_to edit_project_path(@project)
     else
       redirect_to @project, notice: 'error al crear la foto'
     end
@@ -48,8 +48,8 @@ class PhotosController < ApplicationController
 
     @photo.destroy
     @project = Project.find(params[:project_id])
-    
-    redirect_to @project, notice: 'Photo was successfully'
+
+    redirect_to edit_project_path(@project)
 
   end
 
