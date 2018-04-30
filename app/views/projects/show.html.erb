@@ -13,7 +13,10 @@
     </div>
 
     <div class="col-md-7 show-content" >
-
+      
+     
+        
+      
       <p class="title-h d-inline-block">
 
         <%= @project.name %>
@@ -23,7 +26,22 @@
       <!-- GALERIA DE PRODUCTOS -->
       <div class="sp-loading"><%= image_tag 'sp-loading.gif' %><br>Cargando imagenes</div>
       <div class="sp-wrap">
+         <% if @project.sold_out %>
+          <div class="show-ribbon-box d-flex align-items-center">
+            <div class="sold-out-show ">
+             <p>
+               SOLD OUT
+             </p>
+                SOLD OUT
+              
+              
+            </div>
+            
+          </div>
+       
+        <% end %>
         <% @project.photos.each do |photo| %>
+
           <a href="<%= photo.image %>"><%= image_tag photo.image %></a>
         <% end %>
       </div>
