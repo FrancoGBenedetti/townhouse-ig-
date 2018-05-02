@@ -28,27 +28,20 @@ class ProjectsController < ApplicationController
   # POST /projects.json
   def create
     @project = Project.new(project_params)
-
-    respond_to do |format|
-      if @project.save
-        redirect_to edit_project_path(@project)
-      else
-        format.html { render :new }
-        format.json { render json: @project.errors, status: :unprocessable_entity }
-      end
+    if @project.save
+      redirect_to edit_project_path(@project)
+    else
+      redirect_to edit_project_path(@project), notice: 'error'
     end
   end
 
   # PATCH/PUT /projects/1
   # PATCH/PUT /projects/1.json
   def update
-    respond_to do |format|
-      if @project.update(project_params)
-        redirect_to edit_project_path(@project)
-      else
-        format.html { render :edit }
-        format.json { render json: @project.errors, status: :unprocessable_entity }
-      end
+    if @project.update(project_params)
+      redirect_to edit_project_path(@project)
+    else
+      redirect_to edit_project_path(@project), notice: 'error'
     end
   end
 

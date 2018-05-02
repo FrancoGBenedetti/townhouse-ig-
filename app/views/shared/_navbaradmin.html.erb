@@ -23,6 +23,11 @@
         <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
       </li>
     </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <%= link_to "Change your password", edit_user_path %>
+      </li>
+    </ul>
 
   </div>
 </nav>

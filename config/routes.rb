@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
   # devise_for :users
 
-  devise_for :users, controllers: { registrations: "registrations"}
+  devise_for :users, controllers: { registrations: "registrations", passwords: "passwords"}
 
-  resources :projects do
-    member do
-      post 'make_sold_out'
+  resource :user, only: [:edit] do
+    collection do
+      patch 'update_password'
     end
+  end
+  resources :projects do
     resources :photos, only: [:create, :destroy]
   end
 
