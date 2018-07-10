@@ -529,6 +529,30 @@ nav ul a, nav .brand-logo.center {
 
   }
 }
+.contact-div{
+  
+  background-color: $accent-color;
+    background-blend-mode:multiply;
+  background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(<%= asset_data_uri 'bkg-contact.png' %>);
+  .contact-info-list{
+    list-style: none !important;
+    h3{
+      font-size: 1.2rem;
+      color: white;
+      font-family: $font-content;
+    }
+    h4{
+      font-size: 1.2rem;
+      color: #c8c8c8;
+      font-family: $font-content;
+
+    }
+  }
+
+}
+
 
 footer{
   background: linear-gradient(to bottom right, #f6f6f6, white);

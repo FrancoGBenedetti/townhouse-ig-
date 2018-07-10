@@ -14,6 +14,10 @@ class PagesController < ApplicationController
   def numbers
   end
 
+  def contact
+    @projects = Project.all
+  end
+
   private
     def set_widget
       @widget = Project.all
